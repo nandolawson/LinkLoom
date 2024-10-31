@@ -22,7 +22,7 @@ For further configuration options and information on how to use Docker, there is
 
 ## Configuration
 
-There are three files which needs to be configurated: [`links.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/links.json), [`meta.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/meta.json) and [`theme.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/theme.json). These files are in the config folder.
+There are two files which needs to be configurated: [`links.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/links.json) and [`meta.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/meta.json). These files are in the config folder.
 
 ### links.json
 
@@ -56,6 +56,11 @@ Pretty easy:
 }
 ```
 
+## Theme configuration
+
+There are two files again, [`theme.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/theme.json), which is located in the config folder, and [`particledrift.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/wallpaper/particledrift.json), which is located in a subfolder of the config folder called wallpaper.
+[`theme.json`](https://github.com/nandolawson/LinkLoom/blob/main/config/theme.json)
+
 ### theme.json
 
 This file looks like this:
@@ -65,20 +70,30 @@ This file looks like this:
     "accent": "#ffffff",
     "background": "#000000",
     "button": "#333333",
-    "particles": true,
-    "particle1": "#181818",
-    "particle2": "#3c3c3c",
-    "particle3": "#606060"
+    "wallpaper": "particledrift"
 }
 ```
 
-All values (except for particles) should be color codes as hexadecimal values. Here is a explanation for every of them:
+All values (except for wallpaper) should be color codes as hexadecimal values. Here is a explanation for every of them:
 
 - _`accent`_ is for the color of the text and for highlighted buttons
 - _`background`_ is the color of the background
 - _`button`_ is the color of the buttons
-- _`particles`_ enables / disables the animated background. Set it to true or false.
-- _`particle1`_, _`particle2`_, & _`particle3`_ is for the color of the particles in the background
+- _`wallpaper`_ enables the animated wallpaper if set to _particledrift_
+
+### particledrift.json
+
+This config looks similiar to the one above:
+
+´´´json
+{
+    "particle1": "#181818",
+    "particle2": "#3c3c3c",
+    "particle3": "#606060"
+}
+´´´
+
+All the values are hexadecimal color codes. They are there to determine the colors of the particles.
 
 ## License
 

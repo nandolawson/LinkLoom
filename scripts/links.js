@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Fetch all links from links.json
-    fetch('./config/links.json')
+    fetch('config/links.json')
         .then(response => response.json())
         .then(links => {
             links.forEach(link => {

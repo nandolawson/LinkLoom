@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.style.setProperty('--background', theme.background || '#000000');
             document.documentElement.style.setProperty('--button', theme.button || '#333333');
             if (theme.wallpaper = "particledrift") {
-                fetch('.config/wallpaper/particledrift.json')
+                fetch('config/wallpaper/particledrift.json')
                     .then(response => response.json())
                     .then(wallpaper => {particledrift(wallpaper);});
             }

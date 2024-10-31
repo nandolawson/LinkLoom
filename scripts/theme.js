@@ -1,4 +1,4 @@
-import { particledrift } from '/scripts/wallpaper/particledrift.js';
+import { particledrift } from 'scripts/wallpaper/particledrift.js';
 document.addEventListener("DOMContentLoaded", () => {
     // Fetch all data from theme.json
     fetch('config/theme.json')

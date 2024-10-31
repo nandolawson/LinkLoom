@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Fetch all data from meta.json
-    fetch('../config/meta.json')
+    fetch('.config/meta.json')
         .then(response => response.json())
         .then(metadata => {
             // Name

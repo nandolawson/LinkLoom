@@ -1,7 +1,7 @@
 import { particledrift } from './wallpaper/particledrift.js';
 document.addEventListener("DOMContentLoaded", () => {
     // Fetch all data from theme.json
-    fetch('../config/theme.json')
+    fetch('./config/theme.json')
         .then(response => response.json())
         .then(theme => {
             document.documentElement.style.setProperty('--accent', theme.accent || '#ffffff');

@@ -6,18 +6,18 @@ Licensed under the GPL, Version 3 <https://github.com/nandolawson/LinkLoom/blob/
 This file may not be copied, modified, or distributed except according to those terms.
 */
 
-document.addEventListener("DOMContentLoaded", () => {
-    const projectname = "LinkLoom"
+document.addEventListener('DOMContentLoaded', () => {
+    const projectname = 'LinkLoom'
     // Fetch all data from meta.json
     fetch('config/meta.json')
         .then(response => response.json())
         .then(config => {
             // Name
-            document.getElementById("name")
+            document.getElementById('name')
                 .textContent = config.name;
 
             // Picture
-            document.getElementById("picture")
+            document.getElementById('picture')
                 .innerHTML = config.picture ? `<img src="${config.picture}">` : '';
 
             // Websites title
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Favicon
             const favicon = document.createElement('link');
             favicon.rel = 'icon';
-            favicon.href = config.favicon || "";
+            favicon.href = config.favicon || '';
             document
                 .head
                 .appendChild(favicon);

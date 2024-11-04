@@ -6,7 +6,7 @@ Licensed under the GPL, Version 3 <https://github.com/nandolawson/LinkLoom/blob/
 This file may not be copied, modified, or distributed except according to those terms.
 */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Fetch all data from theme.json
     fetch('config/theme.json')
         .then(response => response.json())
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.style.setProperty('--button', config.button || '#333333');
 
             // Load wallpaper if one is set
-            if (config.wallpaper === "particledrift") {
+            if (config.wallpaper === 'particledrift') {
                 fetch('config/wallpaper/particledrift.json')
                     .then(response => response.json())
                     .then(config => {

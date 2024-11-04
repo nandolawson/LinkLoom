@@ -9,7 +9,7 @@ WORKDIR /srv
 
 # Copy all needed files
 COPY index.html /srv/
-COPY styles /srv/styles/
+COPY style.css /srv/
 COPY config /srv/config/
 COPY scripts /srv/scripts/
 

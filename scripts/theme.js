@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.style.setProperty("--background", config.background || "#000000");
             document.documentElement.style.setProperty("--button", config.button || "#333333");
 
+            // Set background image if specified
+            if (config.backgroundimage) {
+                document.body.style.backgroundImage = `url(${config.backgroundimage})`;
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundPosition = "center";
+                document.body.style.backgroundRepeat = "no-repeat";
+            }
+
             // Load wallpaper if one is set
             if (config.wallpaper === "particledrift") {
                 fetch("config/wallpaper/particledrift.json")

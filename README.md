@@ -74,6 +74,7 @@ This file looks like this:
 {
     "accent": "#ffffff",
     "background": "#000000",
+    "backgroundimage": "",
     "button": "#333333",
     "wallpaper": "particledrift"
 }
@@ -83,6 +84,7 @@ All values (except for wallpaper) should be color codes as hexadecimal values. H
 
 - _`accent`_ is for the color of the text and for highlighted buttons
 - _`background`_ is the color of the background
+- _`backgroundimage`_ can be set to an images url which is then used as a background
 - _`button`_ is the color of the buttons
 - _`wallpaper`_ enables the animated wallpaper if set to _particledrift_
 

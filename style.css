@@ -34,7 +34,7 @@ html, body {
 }
 
 /* Use the fadein animation */
-body {
+main {
     animation: fadein 1s ease-out .5s forwards;
     opacity: 0;
 }
@@ -105,11 +105,13 @@ body {
 
 /* Wallpaper properties */
 .wallpaper {
+    animation: fadein 1s ease-out .5s forwards;
+    opacity: 0;
     left: 0;
     height: 100vh;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100vw;
-    z-index: -1;
+    z-index: 0;
 }

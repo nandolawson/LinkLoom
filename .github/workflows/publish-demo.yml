@@ -2,7 +2,7 @@ name: Deploy demo page to GitHub Pages
 on:
   push:
     paths-ignore:
-      - '.github/**'
+      - '.github/workflows/publish-demo.yml'
       - '.gitignore'
       - 'docker-compose.yml'
       - 'Dockerfile'

@@ -3,7 +3,7 @@ name: Publish to GitHub Container Registry and Docker Hub
 on:
   push:
     paths-ignore:
-      - '.github/**'
+      - '.github/workflows/publish-docker-image.yml'
       - '.gitignore'
       - 'docker-compose.yml'
       - 'LICENSE'
@@ -11,7 +11,7 @@ on:
     branches: ["main"]
   pull_request:
     paths-ignore:
-      - '.github/**'
+      - '.github/workflows/publish-docker-image.yml'
       - '.gitignore'
       - 'LICENSE'
       - 'README.md'
@@ -91,6 +91,7 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             ${{ env.REGISTRY_DOCKERHUB }}/${{ env.REPO_NAME_LOWER }}:${{ env.COMMIT_HASH }}
             ${{ env.REGISTRY_DOCKERHUB }}/${{ env.REPO_NAME_LOWER }}:latest

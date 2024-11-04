@@ -2,27 +2,27 @@
     {
         "url": "https://github.com",
         "text": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "fa-brands fa-github fa-lg"
     },
     {
         "url": "https://medium.com",
         "text": "Medium",
-        "icon": "fa-brands fa-medium"
+        "icon": "fa-brands fa-medium fa-lg"
     },
     {
         "url": "https://youtube.com",
         "text": "YouTube",
-        "icon": "fa-brands fa-youtube"
+        "icon": "fa-brands fa-youtube fa-lg"
     },
     {
         "url": "https://instagram.com",
         "text": "Instagram",
-        "icon": "fa-brands fa-instagram"
+        "icon": "fa-brands fa-instagram fa-lg"
     },
     {
         "url": "https://bsky.app",
         "text": "Bluesky",
-        "icon": "fa-brands fa-bluesky fa-sm"
+        "icon": "fa-brands fa-bluesky"
     },
     {
         "url": "https://github.com/nandolawson/LinkLoom",

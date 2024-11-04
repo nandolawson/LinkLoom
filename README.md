@@ -18,7 +18,9 @@ Since Docker is perfect for self-hosted services, there is an image on [Docker H
 docker run -d -p 5500:80 nandolawson/linkloom:latest
 ```
 
-For further configuration options and information on how to use Docker, there is a wealth of information on the Internet. All files belonging to this project are located in /srv.
+The simplest way to use this project with Docker would be to use the [`Docker Compose file`](https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml).
+
+For further configuration options and information on how to use Docker, there is a wealth of information on the Internet. All files belonging to this project are located in the image in the /srv directory.
 
 ## Configuration
 

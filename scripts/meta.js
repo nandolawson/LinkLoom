@@ -6,19 +6,19 @@ Licensed under the GPL, Version 3 <https://github.com/nandolawson/LinkLoom/blob/
 This file may not be copied, modified, or distributed except according to those terms.
 */
 
-document.addEventListener('DOMContentLoaded', () => {
-    const projectname = 'LinkLoom'
+document.addEventListener("DOMContentLoaded", () => {
+    const projectname = "LinkLoom";
     // Fetch all data from meta.json
-    fetch('config/meta.json')
+    fetch("config/meta.json")
         .then(response => response.json())
         .then(config => {
             // Name
-            document.getElementById('name')
+            document.getElementById("name")
                 .textContent = config.name;
 
             // Picture
-            document.getElementById('picture')
-                .innerHTML = config.picture ? `<img src="${config.picture}">` : '';
+            document.getElementById("picture")
+                .innerHTML = config.picture ? `<img src="${config.picture}">` : "";
 
             // Websites title
             document.title = config.title || `${projectname}`;
@@ -74,13 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 urdu: `${projectname} کے ساتھ بنایا گیا`,
                 vietnamese: `Tạo ra với ${projectname}`,
             };
-            document.getElementById('credits')
+            document.getElementById("credits")
                 .textContent = creditstranslations[config.language] || creditstranslations.english;
 
             // Favicon
-            const favicon = document.createElement('link');
-            favicon.rel = 'icon';
-            favicon.href = config.favicon || '';
+            const favicon = document.createElement("link");
+            favicon.rel = "icon";
+            favicon.href = config.favicon || "";
             document
                 .head
                 .appendChild(favicon);

@@ -29,3 +29,6 @@
 *.sln.docstates
 # Project IDX project files
 .idx/
+
+# Node.js modules
+node_modules/

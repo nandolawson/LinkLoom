@@ -1,0 +1,58 @@
+name: ESLint analyze
+
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+        - 'config'
+        - '.devcontainer.json'
+        - '.gitignore'
+        - 'Dockerfile'
+        - 'LICENSE'
+        - 'README.md'
+        - 'docker-compose.yml'
+        - 'eslint.config.mjs'
+        - 'index.html'
+        - 'package-lock.json'
+        - 'package.json'
+        - 'style.css'
+        
+  pull_request:
+    branches: [ "main" ]
+    paths-ignore:
+        - '.github'
+        - 'config'
+        - '.devcontainer.json'
+        - '.gitignore'
+        - 'Dockerfile'
+        - 'LICENSE'
+        - 'README.md'
+        - 'docker-compose.yml'
+        - 'eslint.config.mjs'
+        - 'index.html'
+        - 'package-lock.json'
+        - 'package.json'
+        - 'style.css'
+
+jobs:
+  eslint:
+    name: Run eslint scanning
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install ESLint
+        run: npm install eslint@8.10.0
+      - name: Run ESLint
+        run: npx eslint .
+          --config .eslintrc.js
+          --ext .js,.jsx,.ts,.tsx
+          --output-file eslint-results
+        continue-on-error: true
+      - name: Upload analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          wait-for-processing: true

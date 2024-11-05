@@ -3,17 +3,25 @@ name: Publish to GitHub Container Registry and Docker Hub
 on:
   push:
     paths-ignore:
-      - '.github/workflows/publish-docker-image.yml'
+      - '.github'
       - '.gitignore'
+      - '.devcontainer.json'
       - 'docker-compose.yml'
+      - 'eslint.config.mjs'
       - 'LICENSE'
+      - 'package-lock.json'
+      - 'package.json'
       - 'README.md'
     branches: ["main"]
   pull_request:
     paths-ignore:
-      - '.github/workflows/publish-docker-image.yml'
+      - '.github'
       - '.gitignore'
+      - '.devcontainer.json'
+      - 'eslint.config.mjs'
       - 'LICENSE'
+      - 'package-lock.json'
+      - 'package.json'
       - 'README.md'
     branches: ["main"]
 

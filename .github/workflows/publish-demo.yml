@@ -2,11 +2,15 @@ name: Deploy demo page to GitHub Pages
 on:
   push:
     paths-ignore:
-      - '.github/workflows/publish-demo.yml'
+      - '.github'
       - '.gitignore'
+      - '.devcontainer.json'
       - 'docker-compose.yml'
       - 'Dockerfile'
+      - 'eslint.config.mjs'
       - 'LICENSE'
+      - 'package-lock.json'
+      - 'package.json'
       - 'README.md'
     branches: ["main"]
 permissions:

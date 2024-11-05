@@ -6,83 +6,78 @@ Licensed under the GPL, Version 3 <https://github.com/nandolawson/LinkLoom/blob/
 This file may not be copied, modified, or distributed except according to those terms.
 */
 
-document.addEventListener("DOMContentLoaded", () => {
-    const projectname = "LinkLoom";
-    // Fetch all data from meta.json
-    fetch("config/meta.json")
-        .then(response => response.json())
-        .then(config => {
-            // Name
-            document.getElementById("name")
-                .textContent = config.name;
+const project = "LinkLoom";
 
-            // Picture
-            document.getElementById("picture")
-                .innerHTML = config.picture ? `<img src="${config.picture}">` : "";
+const creditstranslations = {
+    arabic: `تم الإنشاء باستخدام ${project}`,
+    basque: `Sortu ${project}-rekin`,
+    bengali: `${project} দিয়ে তৈরি`,
+    bosnian: `Stvoreno s ${project}`,
+    bulgarian: `Създадено с ${project}`,
+    catalan: `Creat amb ${project}`,
+    chinese: `使用 ${project} 创建`,
+    croatian: `Stvoreno s ${project}`,
+    czech: `Vytvořeno s ${project}`,
+    danish: `Oprettet med ${project}`,
+    dutch: `Gemaakt met ${project}`,
+    english: `Created with ${project}`,
+    estonian: `Loodud ${project} abil`,
+    filipino: `Nilikha gamit ang ${project}`,
+    finnish: `Luotu ${project} avulla`,
+    french: `Créé avec ${project}`,
+    galician: `Creado con ${project}`,
+    german: `Mit ${project} erstellt`,
+    greek: `Δημιουργήθηκε με ${project}`,
+    hebrew: `נוצר עם ${project}`,
+    hindi: `${project} के साथ बनाया गया`,
+    hungarian: `Készült: ${project}`,
+    icelandic: `Búið til með ${project}`,
+    indonesian: `Dibuat dengan ${project}`,
+    irish: `Cruthaithe le ${project}`,
+    italian: `Creato con ${project}`,
+    japanese: `${project}で作成`,
+    korean: `${project}으로 만들어졌습니다`,
+    latvian: `Izveidots ar ${project}`,
+    lithuanian: `Sukurtas naudojant ${project}`,
+    malay: `Dicipta dengan ${project}`,
+    norwegian: `Opprettet med ${project}`,
+    persian: `ایجاد شده با ${project}`,
+    polish: `Stworzono z ${project}`,
+    portuguese: `Criado com ${project}`,
+    romanian: `Creat cu ${project}`,
+    russian: `Создано с помощью ${project}`,
+    slovak: `Vytvorené s ${project}`,
+    slovenian: `Ustvarjeno z ${project}`,
+    spanish: `Creado con ${project}`,
+    swedish: `Skapad med ${project}`,
+    tamil: `${project} பயன்படுத்தி உருவாக்கப்பட்டது`,
+    telugu: `${project} తో రూపొందించారు`,
+    thai: `สร้างด้วย ${project}`,
+    turkish: `${project} ile oluşturuldu`,
+    ukrainian: `Створено з ${project}`,
+    urdu: `${project} کے ساتھ بنایا گیا`,
+    vietnamese: `Tạo ra với ${project}`
+};
 
-            // Websites title
-            document.title = config.title || `${projectname}`;
+// Fetch all data from meta.json
+fetch("config/meta.json").then(response => response.json()).then(config => {
+    // Websites title
+    document.title = config.title || `LinkLoom`;
 
-            // Credits
-            const creditstranslations = {
-                arabic: `تم الإنشاء باستخدام ${projectname}`,
-                basque: `Sortu ${projectname}-rekin`,
-                bengali: `${projectname} দিয়ে তৈরি`,
-                bosnian: `Stvoreno s ${projectname}`,
-                bulgarian: `Създадено с ${projectname}`,
-                catalan: `Creat amb ${projectname}`,
-                chinese: `使用 ${projectname} 创建`,
-                croatian: `Stvoreno s ${projectname}`,
-                czech: `Vytvořeno s ${projectname}`,
-                danish: `Oprettet med ${projectname}`,
-                dutch: `Gemaakt met ${projectname}`,
-                english: `Created with ${projectname}`,
-                estonian: `Loodud ${projectname} abil`,
-                filipino: `Nilikha gamit ang ${projectname}`,
-                finnish: `Luotu ${projectname} avulla`,
-                french: `Créé avec ${projectname}`,
-                galician: `Creado con ${projectname}`,
-                german: `Mit ${projectname} erstellt`,
-                greek: `Δημιουργήθηκε με ${projectname}`,
-                hebrew: `נוצר עם ${projectname}`,
-                hindi: `${projectname} के साथ बनाया गया`,
-                hungarian: `Készült: ${projectname}`,
-                icelandic: `Búið til með ${projectname}`,
-                indonesian: `Dibuat dengan ${projectname}`,
-                irish: `Cruthaithe le ${projectname}`,
-                italian: `Creato con ${projectname}`,
-                japanese: `${projectname}で作成`,
-                korean: `${projectname}으로 만들어졌습니다`,
-                latvian: `Izveidots ar ${projectname}`,
-                lithuanian: `Sukurtas naudojant ${projectname}`,
-                malay: `Dicipta dengan ${projectname}`,
-                norwegian: `Opprettet med ${projectname}`,
-                persian: `ایجاد شده با ${projectname}`,
-                polish: `Stworzono z ${projectname}`,
-                portuguese: `Criado com ${projectname}`,
-                romanian: `Creat cu ${projectname}`,
-                russian: `Создано с помощью ${projectname}`,
-                slovak: `Vytvorené s ${projectname}`,
-                slovenian: `Ustvarjeno z ${projectname}`,
-                spanish: `Creado con ${projectname}`,
-                swedish: `Skapad med ${projectname}`,
-                tamil: `${projectname} பயன்படுத்தி உருவாக்கப்பட்டது`,
-                telugu: `${projectname} తో రూపొందించారు`,
-                thai: `สร้างด้วย ${projectname}`,
-                turkish: `${projectname} ile oluşturuldu`,
-                ukrainian: `Створено з ${projectname}`,
-                urdu: `${projectname} کے ساتھ بنایا گیا`,
-                vietnamese: `Tạo ra với ${projectname}`,
-            };
-            document.getElementById("credits")
-                .textContent = creditstranslations[config.language] || creditstranslations.english;
+    // Name, picture & credits
+    [
+        { id: "name", property: "textContent", value: config.name },
+        { id: "picture", property: "innerHTML", value: config.picture ? `<img src="${config.picture}">` : "" },
+        { id: "credits", property: "textContent", value: creditstranslations[config.language] || creditstranslations.english }
+    ].forEach(({ id, property, value }) => {
+        document.getElementById(id)[property] = value;
+    });
 
-            // Favicon
-            const favicon = document.createElement("link");
-            favicon.rel = "icon";
-            favicon.href = config.favicon || "";
-            document
-                .head
-                .appendChild(favicon);
-        });
+    // Favicon
+    const favicon = document.createElement("link");
+    Object.assign(favicon, {
+        href: config.favicon || "",
+        rel: "icon"
+    });
+    document.head.appendChild(favicon);
 });

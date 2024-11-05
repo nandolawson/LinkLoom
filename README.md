@@ -8,7 +8,7 @@ This is a small Linktree clone which can be easily hosted via GitHub Pages or ot
 
 In this example, GitHub Pages is used because it is very simple to use and free.
 
-The repository must be forked and LinkLoom configured. How to configure can be found in the section below. Then GitHub Pages must be activated and pointed to the master branch.
+The repository must be forked and LinkLoom configured. How to configure can be found in the section below. Then GitHub Pages & must be activated and pointed to the master branch. Also, GitHub Actions need to be enabled.
 
 ### Docker
 
@@ -18,9 +18,11 @@ Since Docker is perfect for self-hosted services, there is an image on [Docker H
 docker run -d -p 5500:80 nandolawson/linkloom:latest
 ```
 
-The simplest way to use this project with Docker would be to use the [`Docker Compose file`](https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml).
-
 For further configuration options and information on how to use Docker, there is a wealth of information on the Internet. All files belonging to this project are located in the image in the /srv directory.
+
+#### Compose
+
+The simplest way to use this project with Docker would be to use the [`Docker Compose file`](https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml). It is important that the config folder and docker-compose.yml are in the same directory (other files are not needed). If this is the case, the container can be started using _`docker compose up -d`_.
 
 ## Configuration
 

@@ -1,7 +1,7 @@
 FROM caddy:latest
 
 LABEL org.opencontainers.image.source=https://github.com/nandolawson/LinkLoom
-LABEL org.opencontainers.image.description="A Linktree clone that is easy to configure. Supports theming and an animated background."
+LABEL org.opencontainers.image.description="A simple, self-hosted service for web links – themable, easy to customize and resource-efficient"
 LABEL org.opencontainers.image.licenses=GPL-3.0-only
 
 # Set work directory

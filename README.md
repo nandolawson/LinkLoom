@@ -1,6 +1,19 @@
-# LinkLoom
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD033 -->
 
-This is a small Linktree clone which can be easily hosted via GitHub Pages or other ways. You can see a demo [here](https://nandolawson.github.io/LinkLoom).
+<div style="text-align: center">
+    <h1>LinkLoom</h1>
+    <p><a href="https://nandolawson.github.io/LinkLoom"><img alt="Docker Image" src="https://img.shields.io/badge/Demo-4cc61e?style=flat&logo=GitHub&logoColor=%23fff"></a>
+    <a href="https://hub.docker.com/r/nandolawson/linkloom"><img alt="Docker Image" src="https://img.shields.io/badge/Docker%20Image-0db7ed?style=flat&logo=Docker&logoColor=%23fff"></a>
+    <a href="https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml"><img alt="Docker Compose" src="https://img.shields.io/badge/Docker%20Compose-0db7ed?style=flat&logo=Docker&logoColor=%23fff"></a></p>
+    <p>A simple, self-hosted service for web links – themable, easy to customize and resource-efficient</p>
+</div>
+
+<h1 style="text-align: center">Documentation</h1>
+
+## About
+
+LinkLoom is a simple, self-hosted service for web links. It is themable (including animated wallpapers), easy to customize and resource-efficient. It follows the same approach as Linktree, but is free, has more configuration options and does not analyze user data.
 
 ## Usage examples
 

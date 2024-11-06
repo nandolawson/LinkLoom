@@ -1,15 +1,10 @@
-<!-- markdownlint-disable MD041 -->
-<!-- markdownlint-disable MD033 -->
+# ![Logo](assets/logo.svg) LinkLoom
 
-<div style="text-align: center">
-    <h1>LinkLoom</h1>
-    <p><a href="https://nandolawson.github.io/LinkLoom"><img alt="Docker Image" src="https://img.shields.io/badge/Demo-4cc61e?style=flat&logo=GitHub&logoColor=%23fff"></a>
-    <a href="https://hub.docker.com/r/nandolawson/linkloom"><img alt="Docker Image" src="https://img.shields.io/badge/Docker%20Image-0db7ed?style=flat&logo=Docker&logoColor=%23fff"></a>
-    <a href="https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml"><img alt="Docker Compose" src="https://img.shields.io/badge/Docker%20Compose-0db7ed?style=flat&logo=Docker&logoColor=%23fff"></a></p>
-    <p>A simple, self-hosted service for web links – themable, easy to customize and resource-efficient</p>
-</div>
+[![Demo](https://img.shields.io/badge/Demo-4cc61e?style=flat&logo=GitHub&logoColor=%23fff 'Demo webpage')](https://nandolawson.github.io/LinkLoom)
+[![Docker Image](https://img.shields.io/badge/Docker%20Image-0db7ed?style=flat&logo=Docker&logoColor=%23fff 'Docker Hub')](https://hub.docker.com/r/nandolawson/linkloom)
+[![Docker Compose](https://img.shields.io/badge/Docker%20Compose-0db7ed?style=flat&logo=Docker&logoColor=%23fff 'Compose file on GitHub')](https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml)
 
-<h1 style="text-align: center">Documentation</h1>
+ A simple, self-hosted service for web links – themable, easy to customize and resource-efficient
 
 ## About
 

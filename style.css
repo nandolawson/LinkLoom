@@ -44,7 +44,7 @@ main {
     display: block;
     font-family: var(--font);
     font-size: .75rem;
-    opacity: .15;
+    opacity: .25;
     padding: 15px;
     pointer-events: auto;
     position: relative;

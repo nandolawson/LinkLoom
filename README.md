@@ -1,8 +1,10 @@
-# ![Logo](assets/logo.svg) LinkLoom
+# LinkLoom
 
 [![Demo](https://img.shields.io/badge/Demo-4cc61e?style=flat&logo=GitHub&logoColor=%23fff 'Demo webpage')](https://nandolawson.github.io/LinkLoom)
 [![Docker Image](https://img.shields.io/badge/Docker%20Image-0db7ed?style=flat&logo=Docker&logoColor=%23fff 'Docker Hub')](https://hub.docker.com/r/nandolawson/linkloom)
 [![Docker Compose](https://img.shields.io/badge/Docker%20Compose-0db7ed?style=flat&logo=Docker&logoColor=%23fff 'Compose file on GitHub')](https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml)
+
+![Logo](assets/logo.svg)
 
  A simple, self-hosted service for web links – themable, easy to customize and resource-efficient
 

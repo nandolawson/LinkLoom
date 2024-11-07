@@ -13,7 +13,7 @@ COPY config /srv/config/
 COPY scripts /srv/scripts/
 
 # Generate Caddyfile
-RUN printf ":80\nroot * /srv\nfile_server" > /etc/caddy/Caddyfile
+RUN printf ":80 {\n	root * /srv\n	file_server\n}\n" > /etc/caddy/Caddyfile
 
 # Healthcheck
 HEALTHCHECK CMD --interval=1m --timeout=15s --retries=3 wget --spider --timeout=10 http://localhost:80 || exit 1

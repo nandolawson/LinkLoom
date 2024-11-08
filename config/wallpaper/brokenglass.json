@@ -1,0 +1,27 @@
+{
+    "amount": 20,
+    "possible_colors": [
+      "#ffffff",
+      "#f8a5a5",
+      "#f8c8d8",
+      "#6fcf97",
+      "#80e0a7",
+      "#48c6ef",
+      "#f8a5a5",
+      "#f9c7a5",
+      "#ffddc1",
+      "#80aaff",
+      "#ff9a8b",
+      "#b4f0a0",
+      "#b1e1fc",
+      "#ffffff",
+      "#d3f8e2",
+      "#74a9d8",
+      "#e6e6fa",
+      "#b8c2cc",
+      "#dfffd6",
+      "#f0e5d8"
+    ],
+    "size": 25
+}
+  

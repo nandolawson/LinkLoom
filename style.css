@@ -89,6 +89,7 @@ main {
     font-weight: bold;
     line-height: 1.25;
     text-align: center;
+    filter: drop-shadow(0 0 1rem black);
 }
 
 #picture img {
@@ -104,7 +105,7 @@ main {
 }
 
 /* Wallpaper properties */
-.wallpaper {
+#wallpapers > * {
     animation: fadein 1s ease-out .5s forwards;
     opacity: 0;
     left: 0;

@@ -147,16 +147,6 @@ fetch("config/theme.json").then(response => response.json()).then(config => {
         document.documentElement.style.setProperty(property, value);
     });
 
-    // Set background image if specified
-    if (config.backgroundimage) {
-        Object.assign(document.body.style, {
-            backgroundImage: `url(${config.backgroundimage})`,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"
-        });
-    }
-
     // Support single wallpaper instead of the new array to allow old config files
     if (config.wallpaper) { config.wallpapers = [config.wallpaper]; }
 

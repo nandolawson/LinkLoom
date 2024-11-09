@@ -13,6 +13,7 @@ export default [
     "no-plusplus": "off",
     "no-ternary": "off",
     "one-var": "off",
+    "sort-vars": "off",
     "strict": "off"
   }}
 ];

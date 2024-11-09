@@ -11,7 +11,7 @@ This file may not be copied, modified, or distributed except according to those 
 const wallpapers = {
     brokenglass: (wallpaperconfig) => {
         const wallpaper = document.createElement("div");
-        for (let i = 0; i < wallpaperconfig.amount; i++) {
+        for (let amount = 0; amount < wallpaperconfig.amount; amount++) {
             const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"),
                 polygon = document.createElementNS(svg.namespaceURI,'polygon'),
                 wrapper = document.createElement("div");
@@ -33,7 +33,7 @@ const wallpapers = {
 
             // Generate random polygon points - min of 3, max of 5 
             let points = "0,0"
-            for (let i = 0; i < 2 + Math.random() * 2; i++) { 
+            for (let pointCount = 0; pointCount < 2 + Math.random() * 2; pointCount++) { 
                 points += ` ${Math.random()*100},${Math.random()*100}`
             }
             polygon.setAttribute("points", points);

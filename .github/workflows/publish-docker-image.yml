@@ -4,6 +4,7 @@ on:
   push:
     paths-ignore:
       - '.github/**'
+      - 'assets/**'
       - '.gitignore'
       - '.devcontainer.json'
       - 'docker-compose.yml'
@@ -15,7 +16,8 @@ on:
     branches: ["main"]
   pull_request:
     paths-ignore:
-      - '.github'
+      - '.github/**'
+      - 'assets/**'
       - '.gitignore'
       - '.devcontainer.json'
       - 'eslint.config.mjs'

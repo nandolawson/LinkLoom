@@ -3,6 +3,7 @@ on:
   push:
     paths-ignore:
       - '.github/**'
+      - 'assets/**'
       - '.gitignore'
       - '.devcontainer.json'
       - 'docker-compose.yml'

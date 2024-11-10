@@ -1,7 +1,7 @@
 # LinkLoom
 
 [![Demo](https://img.shields.io/badge/Demo-4cc61e?style=flat&logo=GitHub&logoColor=%23fff)](https://nandolawson.github.io/LinkLoom)
-[![Wiki](https://img.shields.io/badge/Demo-000000?style=flat&logo=GitHub&logoColor=%23fff)](https://github.com/nandolawson/LinkLoom/wiki)
+[![Wiki](https://img.shields.io/badge/Wiki-000000?style=flat&logo=GitHub&logoColor=%23fff)](https://github.com/nandolawson/LinkLoom/wiki)
 [![Docker Image](https://img.shields.io/badge/Docker%20Image-0db7ed?style=flat&logo=Docker&logoColor=%23fff)](https://hub.docker.com/r/nandolawson/linkloom)
 [![Docker Compose](https://img.shields.io/badge/Docker%20Compose-0db7ed?style=flat&logo=Docker&logoColor=%23fff)](https://github.com/nandolawson/LinkLoom/blob/main/docker-compose.yml)
 

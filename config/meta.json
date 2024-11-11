@@ -1,7 +1,7 @@
 {
-    "favicon": "https://github.com/fluidicon.png",
+    "favicon": "assets/favicon.svg",
     "language": "english",
-    "name": "Random Person",
-    "picture": "https://github.com/fluidicon.png",
+    "name": "LinkLoom",
+    "picture": "assets/logo.svg",
     "title": "LinkLoom"
 }

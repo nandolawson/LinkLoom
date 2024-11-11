@@ -39,6 +39,16 @@ main {
     opacity: 0;
 }
 
+#about {
+    color: var(--accent);
+    filter: drop-shadow(0 0 1rem black);
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: .75;
+    text-align: center;
+}
+
+
 #credits {
     color: var(--accent);
     display: block;

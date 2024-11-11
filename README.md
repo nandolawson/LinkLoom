@@ -21,7 +21,7 @@ LinkLoom is a simple, self-hosted service for web links. It is themable (includi
 
 ## How to use
 
-All information on how to deploy and configure LinkLoom can be found in the wiki of this repository.
+All information on how to deploy and configure LinkLoom can be found in the [wiki](https://github.com/nandolawson/LinkLoom/wiki) of this repository.
 
 ## License
 

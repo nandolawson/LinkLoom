@@ -69,7 +69,7 @@ fetch("config/meta.json").then(response => response.json()).then(config => {
         { id: "name", property: "textContent", value: config.name },
         { id: "picture", property: "innerHTML", value: config.picture ? `<img src="${config.picture}">` : "" },
         { id: "about", property: "textContent", value: config.about },
-        { id: "credits", property: "textContent", value: creditstranslations[config.language] || creditstranslations.english }
+        { id: "credits", property: "innerHTML", value: `<a href="https://github.com/nandolawson/LinkLoom" target="_blank">${creditstranslations[config.language] || creditstranslations.english}</a>` }
     ].forEach(({ id, property, value }) => {
         document.getElementById(id)[property] = value;
     });

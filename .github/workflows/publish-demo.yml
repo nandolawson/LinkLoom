@@ -5,6 +5,7 @@ on:
       - '.github/**'
       - '.gitignore'
       - '.devcontainer.json'
+      - 'CONTRIBUTING.md'
       - 'docker-compose.yml'
       - 'Dockerfile'
       - 'eslint.config.mjs'

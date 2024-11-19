@@ -6,10 +6,6 @@ Licensed under the GPL, Version 3 <https://github.com/nandolawson/LinkLoom/blob/
 This file may not be copied, modified, or distributed except according to those terms.
 */
 
-/* Needed imports */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://use.fontawesome.com/releases/v6.6.0/css/all.css');
-
 /* Animation when site is loaded */
 @keyframes fadein {
     0% {opacity: 0; transform: translateY(-10px);}

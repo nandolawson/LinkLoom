@@ -1,13 +1,3 @@
-/*
-LinkLoom
-Copyright 2024 Nando Lawson
-
-Licensed under the GPL, Version 3 <https://github.com/nandolawson/LinkLoom/blob/main/LICENSE>.
-This file may not be copied, modified, or distributed except according to those terms.
-*/
-
-/* Wallpapers */
-
 const wallpapers = {
     brokenglass: (wallpaperconfig) => {
         const wallpaper = document.createElement("div");

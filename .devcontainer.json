@@ -1,5 +1,42 @@
 {
-	"name": "Node.js",
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"DavidAnson.vscode-markdownlint",
+				"dbaeumer.vscode-eslint",
+				"fill-labs.dependi",
+				"github.vscode-github-actions"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"markdownlint.run": "onType",
+				"[javascript]": {
+					"eslint.enable": true
+				}
+			}
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:latest": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/node:latest": {
+			"installYarnUsingApt": true,
+			"nodeGypDependencies": false,
+			"nvmVersion": "latest",
+			"nvmInstallPath": "/usr/local/share/nvm",
+			"pnpmVersion": "none",
+			"version": "latest"
+		}
+	},
+	"hostRequirements": {
+		"cpus": 1,
+		"gpu": false,
+		"memory": "1gb",
+		"storage": "4gb"
+	},
+	"image": "debian:stable-slim",
+	"name": "LinkLoom",
 	"postCreateCommand": "npm install"
 }

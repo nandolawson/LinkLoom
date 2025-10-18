@@ -1,6 +1,8 @@
 {
     "amount": 15,
-    "particle1": "#181818",
-    "particle2": "#3c3c3c",
-    "particle3": "#606060"
+    "possible_colors": [
+        "#181818",
+        "#3c3c3c",
+        "#606060"
+    ]
 }

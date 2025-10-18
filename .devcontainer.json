@@ -5,7 +5,8 @@
 				"DavidAnson.vscode-markdownlint",
 				"dbaeumer.vscode-eslint",
 				"fill-labs.dependi",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"ms-vscode.live-server"
 			],
 			"settings": {
 				"editor.formatOnSave": true,

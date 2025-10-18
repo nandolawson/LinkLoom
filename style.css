@@ -30,6 +30,8 @@ body {
 }
 
 /* Use the fadein animation */
+footer,
+header,
 main {
     animation: fadein 1s ease-out .5s forwards;
     opacity: 0;

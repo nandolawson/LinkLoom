@@ -1,11 +1,11 @@
 services:
   linkloom:
     image: nandolawson/linkloom:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - 5500:80/tcp
     volumes:
-      - linkloom:/srv/config:ro
+      - linkloom:/srv/config:rw
     deploy:
       resources:
         limits:

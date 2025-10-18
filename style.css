@@ -1,15 +1,14 @@
-/*
-LinkLoom
-Copyright 2024 Nando Lawson
-
-Licensed under the GPL, Version 3 <https://github.com/nandolawson/LinkLoom/blob/main/LICENSE>.
-This file may not be copied, modified, or distributed except according to those terms.
-*/
-
 /* Animation when site is loaded */
 @keyframes fadein {
-    0% {opacity: 0; transform: translateY(-10px);}
-    100% {opacity: 1; transform: translateY(0);}
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Make the whole site not clickable */
@@ -18,7 +17,8 @@ This file may not be copied, modified, or distributed except according to those 
     user-select: none;
 }
 
-html, body {
+html,
+body {
     background: var(--background);
     font-family: 'Open Sans', sans-serif;
     height: 100%;
@@ -118,12 +118,12 @@ main {
     width: 128px;
 }
 
-#picture:empty + #name {
+#picture:empty+#name {
     margin: 40px auto 20px;
 }
 
 /* Wallpaper properties */
-#wallpapers > * {
+#wallpapers>* {
     animation: fadein 1s ease-out .5s forwards;
     opacity: 0;
     left: 0;

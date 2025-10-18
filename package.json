@@ -1,5 +1,4 @@
 {
-  "name": "linkloom",
   "devDependencies": {
     "@eslint/js": "9.38.0",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
@@ -8,5 +7,6 @@
   },
   "scripts": {
     "lint": "eslint . --format node_modules/@microsoft/eslint-formatter-sarif/sarif.js"
-  }
+  },
+  "private": true
 }

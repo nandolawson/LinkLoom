@@ -1,9 +1,9 @@
 export const particledrift = (wallpaperconfig) => {
     // Get particle colors from config or use default values
-    const possible_colors = Array.isArray(wallpaperconfig.particle) && wallpaperconfig.particle.length > 0
+    const possibleColors = Array.isArray(wallpaperconfig.particle) && wallpaperconfig.particle.length > 0
         ? wallpaperconfig.particle
         : ["#181818", "#3c3c3c", "#606060"];
-    possible_colors.forEach((color, index) => {
+    possibleColors.forEach((color, index) => {
         document.documentElement.style.setProperty(`--particle${index + 1}`, color);
     });
 
@@ -21,7 +21,7 @@ export const particledrift = (wallpaperconfig) => {
     for (let i = 0; i < (wallpaperconfig.amount || 15); i++) {
         const particle = document.createElement("span");
         const size = `${Math.random() * 8 + 5}vmin`;
-        const randomColor = possible_colors[Math.floor(Math.random() * possible_colors.length)];
+        const randomColor = possibleColors[Math.floor(Math.random() * possibleColors.length)];
         // CSS properties
         Object.assign(particle.style, {
             animation: `particledrift-move ${Math.random() * 120 + 30}s linear ${-Math.random() * 200}s infinite`,

@@ -17,7 +17,7 @@ export const characterdrift = (wallpaperconfig) => {
             animation: `characterdrift-move ${Math.random() * 120 + 30}s linear ${-Math.random() * 200}s infinite`,
             backgroundColor: wallpaperconfig[`character${Math.floor(Math.random() * 3) + 1}`],
             borderRadius: "50%",
-            color: randomElementFrom(wallpaperconfig.possible_colors),
+            color: randomElementFrom(wallpaperconfig.possibleColors),
             fontSize,
             left: `${Math.random() * 100}%`,
             position: "absolute",

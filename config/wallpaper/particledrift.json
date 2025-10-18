@@ -1,6 +1,6 @@
 {
     "amount": 15,
-    "possible_colors": [
+    "possibleColors": [
         "#181818",
         "#3c3c3c",
         "#606060"

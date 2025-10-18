@@ -4,22 +4,20 @@ on:
   push:
     branches: [ "main" ]
     paths-ignore:
-      - '.github/**'
-      - 'assets/**'
-      - 'config'
-      - '.devcontainer.json'
-      - '.gitignore'
-      - 'CONTRIBUTING.md'
-      - 'docker-compose.yml'
-      - 'Dockerfile'
-      - 'LICENSE'
-      - 'README.md'
-      - 'docker-compose.yml'
-      - 'eslint.config.mjs'
-      - 'index.html'
-      - 'package-lock.json'
-      - 'package.json'
-      - 'style.css'
+        - '.github/**'
+        - 'assets/**'
+        - 'config'
+        - '.devcontainer.json'
+        - '.dockerignore'
+        - '.gitattributes'
+        - '.gitignore'
+        - 'CONTRIBUTING.md'
+        - 'Dockerfile'
+        - 'LICENSE'
+        - 'README.md'
+        - 'docker-compose.yml'
+        - 'package-lock.json'
+        - 'package.json'
   pull_request:
     branches: [ "main" ]
     paths-ignore:

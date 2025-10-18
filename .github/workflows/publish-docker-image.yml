@@ -7,21 +7,11 @@ on:
       - 'assets/**'
       - '.gitignore'
       - '.devcontainer.json'
+      - '.dockerignore'
+      - .gitattributes
+      - .gitignore
       - 'CONTRIBUTING.md'
       - 'docker-compose.yml'
-      - 'eslint.config.mjs'
-      - 'LICENSE'
-      - 'package-lock.json'
-      - 'package.json'
-      - 'README.md'
-    branches: ["main"]
-  pull_request:
-    paths-ignore:
-      - '.github/**'
-      - 'assets/**'
-      - '.gitignore'
-      - '.devcontainer.json'
-      - 'CONTRIBUTING.md'
       - 'eslint.config.mjs'
       - 'LICENSE'
       - 'package-lock.json'

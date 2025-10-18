@@ -3,11 +3,14 @@ on:
   push:
     paths-ignore:
       - '.github/**'
+      - 'assets/**'
       - '.gitignore'
       - '.devcontainer.json'
+      - '.dockerignore'
+      - .gitattributes
+      - .gitignore
       - 'CONTRIBUTING.md'
       - 'docker-compose.yml'
-      - 'Dockerfile'
       - 'eslint.config.mjs'
       - 'LICENSE'
       - 'package-lock.json'

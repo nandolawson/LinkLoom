@@ -5,7 +5,7 @@ services:
     ports:
       - 5500:80/tcp
     volumes:
-      - ./config:/srv/config:ro
+      - linkloom:/srv/config:ro
     deploy:
       resources:
         limits:
@@ -15,3 +15,6 @@ services:
       options:
         max-size: 10m
         max-file: 3
+volumes:
+  linkloom:
+    external: false

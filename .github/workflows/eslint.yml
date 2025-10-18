@@ -39,7 +39,6 @@ on:
         - 'package-lock.json'
         - 'package.json'
         - 'style.css'
-  workflow_dispatch:
 
 jobs:
   eslint:

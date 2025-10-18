@@ -38,5 +38,5 @@
 	},
 	"image": "debian:stable-slim",
 	"name": "LinkLoom",
-	"postCreateCommand": "npm install"
+	"postCreateCommand": "apt update && apt install libatomic1 && npm install"
 }

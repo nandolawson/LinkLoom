@@ -70,39 +70,6 @@ main {
     opacity: 1;
 }
 
-
-#links {
-    display: block;
-    margin: 27px auto;
-    max-width: 400px;
-    width: auto;
-}
-
-#links a {
-    background-color: var(--button);
-    border-radius: 30px;
-    color: var(--accent);
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-    opacity: .75;
-    padding: 10px;
-    pointer-events: auto;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    transition: all .5s cubic-bezier(.08, .59, .29, .99);
-}
-
-#links a:hover {
-    background-color: var(--accent);
-    color: var(--button);
-    cursor: pointer;
-    opacity: 1;
-}
-
 #name {
     color: var(--accent);
     font-size: 1.5rem;

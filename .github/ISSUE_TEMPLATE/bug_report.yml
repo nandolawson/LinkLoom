@@ -1,0 +1,66 @@
+name: "Bug Report"
+description: "Report a problem"
+title: "<Short description>"
+labels: ["bug"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Describe the Bug"
+      description: "Give a clear, concise description of what the bug is"
+      placeholder: "When I use the particledrift wallpaper, the background remains black..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "List the steps needed to trigger the bug"
+      placeholder: |
+        1. Edit LinkLoom config
+        2. Open LinkLoom
+        3. Background remains black
+    validations:
+      required: true
+
+  - type: input
+    id: expected
+    attributes:
+      label: "Expected Behavior"
+      description: "What did you expect to happen instead?"
+      placeholder: "The background should be animated"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: operating_system
+    attributes:
+      label: "Operating System"
+      description: "Select the OS you are using"
+      options:
+        - label: "Docker"
+        - label: "GitHub Pages"
+        - label: "Netify"
+        - label: "Vercel"
+        - label: "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Log Files"
+      description: "Paste relevant logs or console output"
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: notes
+    attributes:
+      label: "Additional Notes"
+      description: "Anything else we should know?"
+    validations:
+      required: false

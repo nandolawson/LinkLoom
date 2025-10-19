@@ -1,0 +1,48 @@
+name: "Ask a question"
+description: "Ask a question about this software"
+title: "<Question>"
+labels: ["question"]
+
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: "Details"
+      description: "Provide all the details about your question"
+      placeholder: |
+        Please include:
+        - What you are trying to do
+        - What you've tried so far
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "Select the environment you are using"
+      options:
+        - label: "Docker"
+        - label: "GitHub Pages"
+        - label: "Netify"
+        - label: "Vercel"
+        - label: "Other"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Log Files"
+      description: "Paste relevant logs or console output"
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: notes
+    attributes:
+      label: "Additional Notes"
+      description: "Anything else we should know?"
+    validations:
+      required: false

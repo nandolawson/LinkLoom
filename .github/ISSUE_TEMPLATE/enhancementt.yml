@@ -1,0 +1,26 @@
+name: "Enhancement"
+description: "Suggest a small improvement or tweak"
+title: "<Short Description>"
+labels: ["enhancement"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Describe the tweak or improvement you suggest"
+      placeholder: |
+        Please include:
+        - What should be changed or improved
+        - Why this change would help
+        - Any specific scripts or settings affected
+    validations:
+      required: true
+
+  - type: input
+    id: notes
+    attributes:
+      label: "Additional Notes"
+      description: "Anything else we should know?"
+    validations:
+      required: false

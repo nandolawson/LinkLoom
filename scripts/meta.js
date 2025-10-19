@@ -1,5 +1,7 @@
 const project = "LinkLoom";
 
+/* Translations */
+
 const creditstranslations = {
     arabic: `تم الإنشاء باستخدام ${project}`,
     basque: `Sortu ${project}-rekin`,
@@ -50,6 +52,95 @@ const creditstranslations = {
     urdu: `${project} کے ساتھ بنایا گیا`,
     vietnamese: `Tạo ra với ${project}`
 };
+
+/* CSS properties */
+
+// About
+if (!document.getElementById("about-css")) {
+    const style = document.createElement("style");
+    style.id = "about-css";
+    style.textContent = `
+        #about {
+            color: var(--accent);
+            filter: drop-shadow(0 0 1rem black);
+            font-size: 1rem;
+            line-height: 1.5;
+            opacity: .75;
+            padding: 0% 10%;
+            text-align: center;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Credits
+if (!document.getElementById("credits-css")) {
+    const style = document.createElement("style");
+    style.id = "credits-css";
+    style.textContent = `
+        #credits {
+            display: block;
+            font-family: var(--font);
+            font-size: .75rem;
+            padding: 15px;
+            pointer-events: auto;
+            position: relative;
+            text-align: center;
+        }
+
+        #credits a {
+            color: var(--accent);
+            opacity: .25;
+            pointer-events: auto;
+            text-decoration: none;
+            transition: all .5s cubic-bezier(.08, .59, .29, .99);
+        }
+
+        #credits a:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Name
+if (!document.getElementById("name-css")) {
+    const style = document.createElement("style");
+    style.id = "name-css";
+    style.textContent = `
+        #name {
+            color: var(--accent);
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 1.25;
+            text-align: center;
+            filter: drop-shadow(0 0 1rem black);
+        }
+        #picture:empty+#name {
+            margin: 40px auto 20px;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Picture
+if (!document.getElementById("picture-style")) {
+    const style = document.createElement("style");
+    style.id = "picture-style";
+    style.textContent = `
+        #picture img {
+            border-radius: 50%;
+            display: block;
+            height: 128px;
+            margin: 40px auto 20px;
+            width: 128px;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+/* Code */
 
 // Fetch all data from meta.json
 fetch("config/meta.json").then(response => response.json()).then(config => {

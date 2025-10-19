@@ -1,3 +1,5 @@
+/* Themes */
+
 import { brokenglass } from "./wallpapers/brokenglass.js";
 import { characterdrift } from "./wallpapers/characterdrift.js";
 import { gradient } from "./wallpapers/gradient.js";
@@ -10,6 +12,23 @@ const wallpapers = {
     particledrift
 };
 
+/* CSS properties */
+
+const style = document.createElement("style");
+style.textContent = `
+#wallpapers > * {
+    animation: fadein 1s ease-out .5s forwards;
+    opacity: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 0;
+}
+`;
+document.head.appendChild(style);
 
 /* Code */
 

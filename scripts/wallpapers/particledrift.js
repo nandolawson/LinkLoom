@@ -18,7 +18,7 @@ export const particledrift = (wallpaperconfig) => {
         document.head.appendChild(styleSheet);
     }
     const wallpaper = document.createElement("div");
-    for (let i = 0; i < (wallpaperconfig.amount || 15); i++) {
+    for (let idx = 0; idx < (wallpaperconfig.amount || 15); idx++) {
         const particle = document.createElement("span");
         const size = `${Math.random() * 8 + 5}vmin`;
         const randomColor = possibleColors[Math.floor(Math.random() * possibleColors.length)];

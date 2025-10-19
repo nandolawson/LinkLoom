@@ -1,7 +1,7 @@
 export const particledrift = (wallpaperconfig) => {
     // Get particle colors from config or use default values
-    const possibleColors = Array.isArray(wallpaperconfig.particle) && wallpaperconfig.particle.length > 0
-        ? wallpaperconfig.particle
+    const possibleColors = Array.isArray(wallpaperconfig.possibleColors) && wallpaperconfig.possibleColors.length > 0
+        ? wallpaperconfig.possibleColors
         : ["#181818", "#3c3c3c", "#606060"];
     possibleColors.forEach((color, index) => {
         document.documentElement.style.setProperty(`--particle${index + 1}`, color);

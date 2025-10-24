@@ -86,6 +86,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
   upload-release:
+    name: Upload as GitHub release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -94,6 +95,7 @@ jobs:
         run: |
           ZIP_NAME="${GITHUB_REPOSITORY##*/}-${GITHUB_REF#refs/tags/}.zip"
           git archive -o "$ZIP_NAME" HEAD
+          echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
       - name: Extract changelog
         id: changelog
         run: |
@@ -105,7 +107,7 @@ jobs:
       - name: Create release & upload ZIP
         uses: softprops/action-gh-release@v2
         with:
-          files: $ZIP_NAME
+          files: ${{ env.ZIP_NAME }}
           tag_name: ${{ github.ref_name }}
           name: ${{ github.ref_name }}
           body: ${{ steps.changelog.outputs.notes }}

@@ -87,6 +87,8 @@ jobs:
           cache-to: type=gha,mode=max
   upload-release:
     name: Upload as GitHub release
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

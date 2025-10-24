@@ -1,22 +1,8 @@
 name: Deploy demo page to GitHub Pages
 on:
   push:
-    paths-ignore:
-      - '.github/**'
-      - 'assets/**'
-      - '.gitignore'
-      - '.devcontainer.json'
-      - '.dockerignore'
-      - .gitattributes
-      - .gitignore
-      - 'CONTRIBUTING.md'
-      - 'docker-compose.yml'
-      - 'eslint.config.mjs'
-      - 'LICENSE'
-      - 'package-lock.json'
-      - 'package.json'
-      - 'README.md'
-    branches: ["main"]
+    tags:
+      - '*'
 permissions:
   contents: read
   pages: write

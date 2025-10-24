@@ -2,27 +2,11 @@ name: Publish to GitHub Container Registry and Docker Hub
 
 on:
   push:
-    paths-ignore:
-      - '.github/**'
-      - 'assets/**'
-      - '.gitignore'
-      - '.devcontainer.json'
-      - '.dockerignore'
-      - .gitattributes
-      - .gitignore
-      - 'CONTRIBUTING.md'
-      - 'docker-compose.yml'
-      - 'eslint.config.mjs'
-      - 'LICENSE'
-      - 'package-lock.json'
-      - 'package.json'
-      - 'README.md'
-    branches: ["main"]
-
+    tags:
+      - '*'
 env:
   REGISTRY_GHCR: ghcr.io
   REGISTRY_DOCKERHUB: docker.io
-  COMMIT_HASH: ${{ github.sha }}
 
 jobs:
   build_and_push:
@@ -75,7 +59,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ env.REGISTRY_GHCR }}/${{ env.REPO_NAME_LOWER }}:${{ env.COMMIT_HASH }}
+            ${{ env.REGISTRY_GHCR }}/${{ env.REPO_NAME_LOWER }}:${{ github.ref_name }}
             ${{ env.REGISTRY_GHCR }}/${{ env.REPO_NAME_LOWER }}:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
@@ -95,7 +79,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ env.REGISTRY_DOCKERHUB }}/${{ env.REPO_NAME_LOWER }}:${{ env.COMMIT_HASH }}
+            ${{ env.REGISTRY_DOCKERHUB }}/${{ env.REPO_NAME_LOWER }}:${{ github.ref_name }}
             ${{ env.REGISTRY_DOCKERHUB }}/${{ env.REPO_NAME_LOWER }}:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha

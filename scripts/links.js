@@ -1,5 +1,5 @@
-const linksContainer = document.getElementById("links");
-Object.assign(linksContainer.style, {
+const links = document.getElementById("links");
+Object.assign(links.style, {
     display: "block",
     margin: "27px auto",
     maxWidth: "400px",
@@ -13,7 +13,7 @@ fetch("config/links.json")
             const object = document.createElement("a");
             Object.assign(object, {
                 href: link.url,
-                innerHTML: `<i class="${link.icon}"></i> ${link.text}`,
+                innerHTML: `<i class="${link.icon}" aria-hidden="true"></i> ${link.text}`,
                 target: "_blank"
             });
 
@@ -49,6 +49,6 @@ fetch("config/links.json")
                 object.style.cursor = "auto";
             });
 
-            linksContainer.appendChild(object);
+            links.appendChild(object);
         });
     });

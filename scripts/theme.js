@@ -1,17 +1,5 @@
 /* Themes */
 
-import { brokenglass } from "./wallpapers/brokenglass.js";
-import { characterdrift } from "./wallpapers/characterdrift.js";
-import { gradient } from "./wallpapers/gradient.js";
-import { particledrift } from "./wallpapers/particledrift.js";
-
-const wallpapers = {
-    brokenglass,
-    characterdrift,
-    gradient,
-    particledrift
-};
-
 /* CSS properties */
 
 const style = document.createElement("style");
@@ -33,7 +21,7 @@ document.head.appendChild(style);
 /* Code */
 
 // Fetch all data from theme.json
-fetch("config/theme.json").then(response => response.json()).then(config => {
+fetch("config/theme.json").then(response => response.json()).then(async config => {
     // Get colors from config or use default values
     [
         ["--accent", config.accent || "#ffffff"],
@@ -43,13 +31,17 @@ fetch("config/theme.json").then(response => response.json()).then(config => {
         document.documentElement.style.setProperty(property, value);
     });
 
-    // Support single wallpaper instead of the new array to allow old config files
-    if (config.wallpaper) { config.wallpapers = [config.wallpaper]; }
+    // Load all wallpapers from the array dynamically
+const wallpaperPromises = config.wallpapers.map(async wallpaper => {
+    const modulePromise = import(`./wallpapers/${wallpaper}.js`);
+    const configPromise = fetch(`config/wallpaper/${wallpaper}.json`).then(response => response.json());
 
-    // Load wallpaper if one is set
-    for (const wallpaper of config.wallpapers) {
-        fetch(`config/wallpaper/${wallpaper}.json`).then(response => response.json()).then(wallpaperconfig => {
-            document.querySelector("#wallpapers").appendChild(wallpapers[wallpaper](wallpaperconfig));
-        });
+    const [module, wallpaperConfig] = await Promise.all([modulePromise, configPromise]);
+
+    if (module[wallpaper]) {
+        document.querySelector("#wallpapers").appendChild(module[wallpaper](wallpaperConfig));
     }
+});
+
+await Promise.all(wallpaperPromises);
 });

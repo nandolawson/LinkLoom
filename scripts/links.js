@@ -10,23 +10,20 @@ fetch("config/links.json")
     .then(response => response.json())
     .then(config => {
         config.forEach(link => {
-            const object = document.createElement("a");
-            Object.assign(object, {
-                href: link.url,
-                innerHTML: `<i class="${link.icon}" aria-hidden="true"></i> ${link.text}`,
-                target: "_blank"
-            });
+            const linkItem = document.createElement("linkItem");
+            linkItem.href = link.url;
+            linkItem.target = "_blank";
+            linkItem.innerHTML = `<i class="${link.icon}" aria-hidden="true"></i> ${link.text}`;
 
-            Object.assign(object.style, {
+            Object.assign(linkItem.style, {
                 backgroundColor: "var(--button)",
                 borderRadius: "30px",
                 color: "var(--accent)",
+                cursor: "pointer",
                 display: "block",
                 fontSize: "1rem",
-                marginBottom: "10px",
-                marginLeft: "50px",
-                marginRight: "50px",
-                opacity: ".75",
+                margin: "0 50px 10px",
+                opacity: "0.75",
                 padding: "10px",
                 pointerEvents: "auto",
                 position: "relative",
@@ -35,20 +32,17 @@ fetch("config/links.json")
                 transition: "all .5s cubic-bezier(.08, .59, .29, .99)"
             });
 
-            // Hover-Effekt
-            object.addEventListener("mouseenter", () => {
-                object.style.backgroundColor = "var(--accent)";
-                object.style.color = "var(--button)";
-                object.style.opacity = "1";
-                object.style.cursor = "pointer";
+            linkItem.addEventListener("mouseenter", () => {
+                linkItem.style.backgroundColor = "var(--accent)";
+                linkItem.style.color = "var(--button)";
+                linkItem.style.opacity = "1";
             });
-            object.addEventListener("mouseleave", () => {
-                object.style.backgroundColor = "var(--button)";
-                object.style.color = "var(--accent)";
-                object.style.opacity = ".75";
-                object.style.cursor = "auto";
+            linkItem.addEventListener("mouseleave", () => {
+                linkItem.style.backgroundColor = "var(--button)";
+                linkItem.style.color = "var(--accent)";
+                linkItem.style.opacity = ".75";
             });
 
-            links.appendChild(object);
+            links.appendChild(linkItem);
         });
     });

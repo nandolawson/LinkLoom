@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD033 -->
-
 # LinkLoom
 
 [![Demo](https://img.shields.io/badge/Demo-4cc61e?style=flat&logo=GitHub&logoColor=%23fff)](https://nandolawson.github.io/LinkLoom)
@@ -9,15 +7,22 @@
 [![Deploy with Vercel](https://img.shields.io/badge/Deploy%20with%20Vercel-000000?style=flat&logo=Vercel&logoColor=%23fff)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnandolawson%2FLinkLoom&project-name=LinkLoom&repository-name=LinkLoom)
 [![Deploy with Netlify](https://img.shields.io/badge/Deploy%20with%20Netlify-00bebb?style=flat&logo=netlify&logoColor=%23fff)](https://app.netlify.com/start/deploy?repository=https://github.com/nandolawson/LinkLoom/?utm_source=LinkLoom)
 
-<img src="assets/logo.svg" width="150" height="150" alt="Logo"/>
+<img src="assets/logo.svg" width="150" height="150" aria-hidden="true"/> <!-- markdownlint-disable-line MD033 -->
 
  A simple, self-hosted service for web links – themable, easy to customize and resource-efficient
 
 ## About
 
-<img src="assets/screenshot1.png" width="500" alt=" "/>
-
 LinkLoom is a simple, self-hosted service for web links. It is themable (including animated wallpapers), easy to customize and resource-efficient. It follows the same approach as Linktree, but is free, has more configuration options and does not analyze user data.
+
+<!-- markdownlint-disable MD033 -->
+<details>
+    <summary><h3>Screenshots</h3></summary>
+    <img src="assets/screenshot1.png" width="400" aria-hidden="true"/>
+    <img src="assets/screenshot2.png" width="400" aria-hidden="true"/>
+    <img src="assets/screenshot3.png" width="400" aria-hidden="true"/>
+</details>
+<!-- markdownlint-enable MD033 -->
 
 ## How to use
 
